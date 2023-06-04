@@ -1,3 +1,3 @@
 # My_Portfolio
-`Profolio Hack from MLH`
-Using three.js, react.js
+- Profolio Hack from MLH
+- Using three.js, react.js
