@@ -1,5 +1,5 @@
 import React from 'react';
-import Tilt from 'react-tilt';
+import {Tilt} from 'react-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -24,8 +24,8 @@ const About = () => {
       variants={fadeIn("", "", 0.1,1)}
       className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
     >
-      I'm a skilled software developer with few experiences in Javascript, and familiar
-       with some frameworks, such Reacr, Node.js, and Three.js. Currently, learning Solidity.
+      I'm a software developer with few experiences in Javascript, and familiar
+       with some frameworks, such as React, Node.js, and Three.js. Currently, learning Solidity.
        I'm a quick learner, and willing to challenge! I hope I can create more applications
         and cool stuffs in the future.
     </motion.p>
