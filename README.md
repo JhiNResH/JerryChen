@@ -5,3 +5,4 @@
 - React Three Fiber - a library for creating 3D graphics with ThreeJS in React
 - TailwindCSS - a utility-first CSS styling framework
 - Framer Motion - the library used to bring your React website to life with animations
+# JhiNResH.github.io
