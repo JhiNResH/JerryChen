@@ -23,6 +23,7 @@ import threejs from "./tech/threejs.svg";
 import python from "./tech/python.png";
 import solidity from "./tech/solidity.svg";
 import rust from "./tech/rust.png";
+import anchor from "./tech/anchor.jpeg";
 import nextjs from "./tech/nextjs.png"
 
 import meta from "./company/meta.png";
@@ -31,6 +32,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import fortune from "./company/fortune.png";
 import binance from "./company/binance.png";
+import dissect from "./company/dissect.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -63,12 +65,14 @@ export {
   python,
   solidity,
   rust,
+  anchor,
   nextjs,
   meta,
   shopify,
   starbucks,
   fortune,
   binance,
+  dissect,
   tesla,
   carrent,
   zkode,
