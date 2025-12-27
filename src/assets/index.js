@@ -32,15 +32,20 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import fortune from "./company/fortune.png";
 import binance from "./company/binance.png";
+import perena from "./company/Perena.jpg";
 import dissect from "./company/dissect.jpeg";
 import wormhole from "./company/wormhole.jpg";
 import AF from "./company/AF.jpg";
+import sponge from "./company/sponge.jpg";
+import VC from "./company/VC.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import zkode from "./zkode.png";
-import smartreviewhub from "./smartreviewhub.png"
+import smartreviewhub from "./smartreviewhub.png";
+import spongeapp from "./spongeapp.png";
+import spongepage from "./spongepage.png";
 
 export {
   logo,
@@ -83,4 +88,9 @@ export {
   smartreviewhub,
   jobit,
   tripguide,
+  perena,
+  sponge,
+  VC,
+  spongeapp,
+  spongepage,
 };

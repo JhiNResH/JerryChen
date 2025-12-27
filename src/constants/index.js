@@ -30,11 +30,16 @@ import {
   carrent,
   zkode,
   smartreviewhub,
+  spongeapp,
+  spongepage,
   jobit,
   tripguide,
   threejs,
   wormhole,
   AF,
+  perena,
+  sponge,
+  VC,
 } from "../assets";
 
 export const navLinks = [
@@ -191,14 +196,39 @@ const experiences = [
   },
     {
     title: "Growth Developer Intern",
-    company_name: "Accumulated Finance",
-    icon: AF,
+    company_name: "Perena",
+    icon: perena,
     iconBg: "#E6DEDD",
-    date: "Mar 2024 - July 2024",
+    date: "July 2024 - Oct 2024",
     points: [
-      "Write technical research paper to introduce omnichain liquid staking protocol integrated with Curve Finance.",
+      "Do technical research on stablecoins and Defi",
+      "Build a few frontend pages with Reactjs, Tailwindcss",
+      "API integrations and database design",
       "Moderate community",
-      "Guide users using liquid staking protocol",
+    ],
+  },
+    {
+    title: "CEO/ Founder",
+    company_name: "Sponge",
+    icon: sponge,
+    iconBg: "#E6DEDD",
+    date: "Oct 2024 - June 2025",
+    points: [
+      "Technical research on stablecoins and Defi",
+      "Build a few frontend pages with Reactjs, Tailwindcss",
+      "Backend with Rust and Typescript",
+      "Product Lead",
+    ],
+  },
+    {
+    title: "VC Analyst Intern",
+    company_name: "Chushan Venture Capital",
+    icon: VC,
+    iconBg: "#E6DEDD",
+    date: "Dec 2025 - Present",
+    points: [
+      "Research on blockchain and AI company",
+      "Communicate with founders and investors",
     ],
   },
 
@@ -276,6 +306,50 @@ const projects = [
     image: smartreviewhub,
     source_code_link: "https://github.com/",
   },
+    {
+    name: "Sponge App",
+    description:
+      "An app for you to swap, deposit, withdraw stablecoins and warn in Defi.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "rust",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spongeapp,
+    source_code_link: "https://github.com/JhiNResH/SpongeAppSoon",
+  },
+        {
+    name: "Sponge Landing Page",
+    description:
+      "A landing page for Sponge.",
+    tags: [
+      {
+        name: "next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spongepage,
+    source_code_link: "https://github.com/JhiNResH/Sponge_landingpage",
+  },
+
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };
