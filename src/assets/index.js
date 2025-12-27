@@ -33,6 +33,8 @@ import tesla from "./company/tesla.png";
 import fortune from "./company/fortune.png";
 import binance from "./company/binance.png";
 import dissect from "./company/dissect.jpeg";
+import wormhole from "./company/wormhole.jpg";
+import AF from "./company/AF.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -73,6 +75,8 @@ export {
   fortune,
   binance,
   dissect,
+  wormhole,
+  AF,
   tesla,
   carrent,
   zkode,

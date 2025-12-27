@@ -33,6 +33,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  wormhole,
+  AF,
 } from "../assets";
 
 export const navLinks = [
@@ -162,6 +164,44 @@ const experiences = [
       "Help Help build the webpage of the applicaiton.",
     ],
   },
+  {
+    title: "Fellow",
+    company_name: "Wormhole",
+    icon: wormhole,
+    iconBg: "#E6DEDD",
+    date: "Mar 2024 - Present",
+    points: [
+      "Write technical research paper to introduce Wormhole cross-chain protocol in Chinese/English",
+      "Moderate community",
+      "Host online/offline events",
+      "Guide users using cross-chain protocol with Wormhole between Solana and other chains",
+    ],
+  },
+    {
+    title: "Ambassador",
+    company_name: "Accumulated Finance",
+    icon: AF,
+    iconBg: "#E6DEDD",
+    date: "Mar 2024 - July 2024",
+    points: [
+      "Write technical research paper to introduce omnichain liquid staking protocol integrated with Curve Finance.",
+      "Moderate community",
+      "Guide users using liquid staking protocol",
+    ],
+  },
+    {
+    title: "Growth Developer Intern",
+    company_name: "Accumulated Finance",
+    icon: AF,
+    iconBg: "#E6DEDD",
+    date: "Mar 2024 - July 2024",
+    points: [
+      "Write technical research paper to introduce omnichain liquid staking protocol integrated with Curve Finance.",
+      "Moderate community",
+      "Guide users using liquid staking protocol",
+    ],
+  },
+
 
 
 ];
