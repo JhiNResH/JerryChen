@@ -13,24 +13,15 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
   python,
   solidity,
   rust,
   nextjs,
-  meta,
-  starbucks,
   fortune,
   binance,
-  tesla,
-  shopify,
-  carrent,
   zkode,
   smartreviewhub,
   deshop,
-  jobit,
-  tripguide,
   threejs,
 } from "../assets";
 
@@ -51,7 +42,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Developer",
     icon: web,
   },
   {
@@ -90,12 +81,12 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Rust",
-    icon: rust,
+    name: "Next.js",
+    icon: nextjs,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Redux",
+    icon: redux,
   },
   {
     name: "Node JS",
@@ -106,20 +97,28 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Solidity",
+    icon: solidity,
+  },
+  {
+    name: "Rust",
+    icon: rust,
+  },
+  {
+    name: "Python",
+    icon: python,
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "python",
-    icon: python,
-  },
-  {
-    name: "solidity",
-    icon: solidity,
+    name: "Three JS",
+    icon: threejs,
   },
 ];
 
@@ -131,57 +130,65 @@ const experiences = [
     iconBg: "#383E56",
     date: "Feb 2020 - June 2020",
     points: [
-      "Using Autocad or Solidwork to design the components of the power plants.",
-      "Organize and aggregate customers' information into the cloud with python and excel.",
-      "Communicating with clients from different countries.",
+      "Used AutoCAD and SolidWorks to design components for power plant systems.",
+      "Aggregated and organized customer data into cloud systems using Python and Excel.",
+      "Coordinated with international clients across multiple time zones.",
     ],
   },
   {
-    title: "Prepared Angel",
+    title: "Community Angel",
     company_name: "Binance",
     icon: binance,
     iconBg: "#E6DEDD",
-    date: "Oct 2022 - Now",
+    date: "Oct 2022 - Apr 2023",
     points: [
-      "Help maintain the Discord community and hold regular events.",
-      "Write DiscordBot to save human time reading information.",
+      "Maintained the official Binance Discord community and organized regular educational events.",
+      "Developed a Discord bot to automate information retrieval and reduce manual moderation effort.",
     ],
   },
-
-];
-
-const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "Full-Stack Web Development",
+    company_name: "BCIT — web603 Bootcamp",
+    icon: web,
+    iconBg: "#383E56",
+    date: "2024 - Present",
+    points: [
+      "Built full-stack SPAs with React, Express, MongoDB, and JWT authentication.",
+      "Developed PWA-compliant apps with service workers, responsive layouts, and Bootstrap 4/5.",
+      "Applied Redux and Redux Toolkit for state management across multi-component React apps.",
+      "Practised agile workflows: feature branches, pull requests, and code reviews on GitHub.",
+    ],
   },
 ];
+
+const testimonials = [];
 
 const projects = [
   {
+    name: "TaskFlow",
+    description:
+      "A full-stack task management SPA with JWT authentication, CRUD operations, priority filtering, and PWA offline support. Built with React, Express, MongoDB, and SASS.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: backend,
+    source_code_link: "https://github.com/JhiNResH/web603",
+  },
+  {
     name: "ZKode",
     description:
-      "Anonymous Github made with zero-knowledge unirep.",
+      "Anonymous GitHub built on zero-knowledge proofs using UniRep protocol. Lets developers contribute code without revealing their identity on-chain.",
     tags: [
       {
         name: "typescript",
@@ -192,7 +199,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
+        name: "zero-knowledge",
         color: "pink-text-gradient",
       },
     ],
@@ -202,18 +209,18 @@ const projects = [
   {
     name: "SmartReviewHub",
     description:
-      "A blockchain google map platform, providing a more transparent and better place to share your experience.",
+      "A decentralized review platform on-chain — a more transparent alternative to Google Maps reviews. Users own their reviews as on-chain attestations.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "html",
+        name: "solidity",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "web3",
         color: "pink-text-gradient",
       },
     ],
@@ -223,7 +230,7 @@ const projects = [
   {
     name: "Deshop",
     description:
-      "A blockchain digital commerce platform, provides a more transparent and faster way to buy things with cryptos.",
+      "A decentralized e-commerce platform enabling peer-to-peer purchases with crypto. Smart contracts handle escrow and settlement without a middleman.",
     tags: [
       {
         name: "javascript",
@@ -234,11 +241,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "html",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "css",
+        name: "ethereum",
         color: "pink-text-gradient",
       },
     ],

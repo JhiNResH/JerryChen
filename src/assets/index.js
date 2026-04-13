@@ -8,8 +8,6 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -23,18 +21,11 @@ import threejs from "./tech/threejs.svg";
 import python from "./tech/python.png";
 import solidity from "./tech/solidity.svg";
 import rust from "./tech/rust.png";
-import nextjs from "./tech/nextjs.png"
+import nextjs from "./tech/nextjs.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import fortune from "./company/fortune.png";
 import binance from "./company/binance.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 import zkode from "./zkode.png";
 import smartreviewhub from "./smartreviewhub.png";
 import deshop from "./deshop.png";
@@ -49,8 +40,6 @@ export {
   menu,
   close,
   css,
-  docker,
-  figma,
   git,
   html,
   javascript,
@@ -65,16 +54,9 @@ export {
   solidity,
   rust,
   nextjs,
-  meta,
-  shopify,
-  starbucks,
   fortune,
   binance,
-  tesla,
-  carrent,
   zkode,
   smartreviewhub,
   deshop,
-  jobit,
-  tripguide,
 };
