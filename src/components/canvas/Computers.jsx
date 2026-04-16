@@ -41,25 +41,25 @@ const FloatingShape = () => {
 
 const ComputersCanvas = () => {
   return (
-    <Canvas
-      frameloop="always"
-      camera={{ position: [0, 0, 5], fov: 45 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={null}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
-        <FloatingShape />
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          autoRotate
-          autoRotateSpeed={0.5}
-        />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <div className="w-full h-full absolute inset-0">
+      <Canvas
+        frameloop="always"
+        camera={{ position: [0, 0, 5], fov: 45 }}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={null}>
+          <ambientLight intensity={0.5} />
+          <pointLight position={[10, 10, 10]} intensity={1} />
+          <FloatingShape />
+          <OrbitControls
+            enableZoom={false}
+            autoRotate
+            autoRotateSpeed={0.5}
+          />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 
