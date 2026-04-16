@@ -7,6 +7,12 @@ import CanvasLoader from '../Loader';
 const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
+  useEffect(() => {
+    computer.scene.traverse((child) => {
+      child.frustumCulled = false;
+    });
+  }, [computer.scene]);
+
   return (
     <mesh>
       <hemisphereLight intensity={0.15}
