@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from 'three';
@@ -8,7 +8,7 @@ import CanvasLoader from '../Loader';
 const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
-  useEffect(() => {
+  useMemo(() => {
     computer.scene.traverse((child) => {
       child.frustumCulled = false;
       if (child.isMesh && child.geometry) {
