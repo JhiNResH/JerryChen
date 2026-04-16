@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import * as THREE from 'three';
 
 import CanvasLoader from '../Loader';
 
@@ -10,6 +11,12 @@ const Computers = ({ isMobile }) => {
   useEffect(() => {
     computer.scene.traverse((child) => {
       child.frustumCulled = false;
+      if (child.isMesh && child.geometry) {
+        child.geometry.computeBoundingSphere();
+        if (!child.geometry.boundingSphere || isNaN(child.geometry.boundingSphere.radius)) {
+          child.geometry.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0, 0), 10);
+        }
+      }
     });
   }, [computer.scene]);
 
