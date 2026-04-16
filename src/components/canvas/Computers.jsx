@@ -1,86 +1,63 @@
-import { Suspense, useEffect, useMemo, useState } from 'react';
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import * as THREE from 'three';
+import { useRef, Suspense } from 'react';
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Preload } from "@react-three/drei";
 
-import CanvasLoader from '../Loader';
+const FloatingShape = () => {
+  const meshRef = useRef();
+  const wireRef = useRef();
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf')
-
-  useMemo(() => {
-    computer.scene.traverse((child) => {
-      child.frustumCulled = false;
-      if (child.isMesh && child.geometry) {
-        child.geometry.computeBoundingSphere();
-        if (!child.geometry.boundingSphere || isNaN(child.geometry.boundingSphere.radius)) {
-          child.geometry.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0, 0), 10);
-        }
-      }
-    });
-  }, [computer.scene]);
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    meshRef.current.rotation.x = t * 0.15;
+    meshRef.current.rotation.y = t * 0.2;
+    meshRef.current.position.y = Math.sin(t * 0.5) * 0.3;
+    wireRef.current.rotation.x = t * 0.15;
+    wireRef.current.rotation.y = t * 0.2;
+    wireRef.current.position.y = Math.sin(t * 0.5) * 0.3;
+  });
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.15}
-      groundColor="black" />
-      <pointLight intensity={1} position={[10, 10, 10]} />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={[0.12]}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-        frustumCulled={false}
-      />
-    </mesh>
-  )
-}
+    <>
+      <mesh ref={meshRef}>
+        <icosahedronGeometry args={[1.8, 1]} />
+        <meshStandardMaterial
+          color="#915eff"
+          transparent
+          opacity={0.15}
+        />
+      </mesh>
+      <mesh ref={wireRef}>
+        <icosahedronGeometry args={[1.8, 1]} />
+        <meshStandardMaterial
+          color="#915eff"
+          wireframe
+          transparent
+          opacity={0.6}
+        />
+      </mesh>
+    </>
+  );
+};
 
-const ComputersCanvas =() => {
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
-    
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
-    }
-
-  }, [])
-
+const ComputersCanvas = () => {
   return (
     <Canvas
       frameloop="always"
-      shadows
-      camera={{ position: [20, 3, 5], fov: 25}}
+      camera={{ position: [0, 0, 5], fov: 45 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={ <CanvasLoader />}>
-        <OrbitControls 
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
+      <Suspense fallback={null}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
+        <FloatingShape />
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+          autoRotate
+          autoRotateSpeed={0.5}
         />
-        <Computers isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
