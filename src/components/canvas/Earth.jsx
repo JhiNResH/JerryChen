@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from '../Loader';
+import { useWebGLSupport } from '../../utils/webgl';
 
 const Earth = () => {
   const earth = useGLTF('./planet/scene.gltf')
@@ -17,6 +18,19 @@ const Earth = () => {
 }
 
 const EarthCanvas = () => {
+  const supportsWebGL = useWebGLSupport();
+
+  if (!supportsWebGL) {
+    return (
+      <div className="flex h-full min-h-[320px] items-center justify-center rounded-2xl border border-white/10 bg-tertiary/60">
+        <div className="text-center">
+          <p className="text-sm uppercase tracking-[0.25em] text-secondary">Available for</p>
+          <p className="mt-3 text-2xl font-bold text-white">Web, product, and blockchain work</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Canvas
       shadows

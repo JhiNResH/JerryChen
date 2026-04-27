@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Decal, Float, OrbitControls, Preload, useTexture, } from "@react-three/drei";
 
 import CanvasLoader from '../Loader';
+import { useWebGLSupport } from '../../utils/webgl';
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -32,6 +33,16 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const supportsWebGL = useWebGLSupport();
+
+  if (!supportsWebGL) {
+    return (
+      <div className="flex h-full w-full items-center justify-center rounded-full border border-white/10 bg-white/5 p-5">
+        <img src={icon} alt="" className="h-16 w-16 object-contain" />
+      </div>
+    );
+  }
+
   return (
     <Canvas
       frameloop="demand"
